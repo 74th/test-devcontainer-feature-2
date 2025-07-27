@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - hello
+          - flyway-1.8.0
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -33,7 +33,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - hello
+          - flyway-1.8.0
     steps:
       - uses: actions/checkout@v4
 
