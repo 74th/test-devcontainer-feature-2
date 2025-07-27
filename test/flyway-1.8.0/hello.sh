@@ -4,6 +4,6 @@ set -e
 
 source dev-container-features-test-lib
 
-check "execute command" bash -c "hello | grep 'hello, $(whoami)!'"
+check "execute command" bash -c "hello | grep 'hey, $(whoami)!'"
 
 reportResults

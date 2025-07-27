@@ -2,7 +2,7 @@
     "hello": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "hello": {}
+            "flyway-1.8.0": {}
         }
     }
 }
