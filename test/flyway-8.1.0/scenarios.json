@@ -1,8 +1,0 @@
-{
-    "ubuntu": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "flyway-8.1.0": {}
-        }
-    }
-}

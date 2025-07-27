@@ -51,12 +51,11 @@ name, idを記述する。versionは、GitHub Packages上必ずバージョン�
 
 ### テストの作成
 
-test/flyway-8.1.0に test.sh, ubuntu.sh, duplicate.sh を作成
+test/flyway-8.1.0に test.sh, <シナリオ名>.sh, duplicate.sh を作成
 
 一旦全部同じ内容でよさそう。
 
 scenarios.json は以下のように記述。
-なんかtest.shでテストされて叢だけれど、scenarios.jsonに1シナリオ追加しない
 
 ```json
 {
@@ -69,15 +68,14 @@ scenarios.json は以下のように記述。
 }
 ```
 
+scenarios.jsonとubuntu.shを削除すれば、追加シナリオなしでテストが動いてくれてる。
 
 ### テストの実行
 
 テストは以下のコマンドで実施
 
-````
-
+```
 devcontainer features test --features flyway-8.1.0
-
 ```
 
 ### 重複インストールへの対応
@@ -85,5 +83,10 @@ devcontainer features test --features flyway-8.1.0
 duplicate.sh は、重複インストールをテストするのに使われる。
 
 install.sh に重複を入れる
+
+```bash
+if [ -d "/flyway" ]; then
+  echo "Flyway is already installed"
+  exit 0
+fi
 ```
-````
