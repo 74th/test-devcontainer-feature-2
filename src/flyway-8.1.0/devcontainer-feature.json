@@ -4,9 +4,9 @@
     "version": "0.0.1",
     "description": "A flyway feature",
     "options": {},
-        "containerEnv": {
-            "PATH": "/flyway:${PATH}"
-        },
+    "containerEnv": {
+        "PATH": "/flyway:${PATH}"
+    },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
