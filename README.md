@@ -94,3 +94,17 @@ if [ -d "/flyway" ]; then
   exit 0
 fi
 ```
+
+### サブディレクトリ
+
+./features にすべてを格納したい。
+
+コマンドは以下で実行できる。
+
+```
+devcontainer features test --features flyway-8.1.0 -p ./features/
+```
+
+.github/workflows/test.yaml の devcontainer testコマンドに `-p ./features/` を追加する。
+
+.github/workflows/{validate,release}.yaml の devcontainers/action@v1 の `base-path-to-features` に `./features/src` を指定する。
