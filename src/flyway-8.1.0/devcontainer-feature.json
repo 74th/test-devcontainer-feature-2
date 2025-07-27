@@ -1,9 +1,12 @@
 {
-    "name": "flyway-1.8.0",
-    "id": "flyway-1.8.0",
+    "name": "flyway-8.1.0",
+    "id": "flyway-8.1.0",
     "version": "0.0.1",
     "description": "A flyway feature",
     "options": {},
+    "containerEnv": {
+        "PATH": "/flyway:${PATH}"
+    },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
