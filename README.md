@@ -43,10 +43,14 @@ name, idを記述する。versionは、GitHub Packages上必ずバージョン�
   "containerEnv": {
     "PATH": "/flyway:${PATH}"
   },
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/java:1": {}
+  },
   "installsAfter": ["ghcr.io/devcontainers/features/common-utils"]
 }
 ```
 
+- javaなど他のfeaturesに依存する場合は、dependsOnに記述する
 - 環境変数の設定は devcontainer-feature.json の `containerEnv` に追加する
 
 ### テストの作成
@@ -59,12 +63,12 @@ scenarios.json は以下のように記述。
 
 ```json
 {
-    "ubuntu": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "flyway-8.1.0": {}
-        }
+  "ubuntu": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "flyway-8.1.0": {}
     }
+  }
 }
 ```
 
