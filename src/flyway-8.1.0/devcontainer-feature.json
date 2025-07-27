@@ -1,16 +1,16 @@
 {
-    "name": "flyway-8.1.0",
-    "id": "flyway-8.1.0",
-    "version": "0.0.2",
-    "description": "A flyway feature",
-    "options": {},
-    "containerEnv": {
-        "PATH": "/flyway:${PATH}"
-    },
-	"dependsOn": {
-		"ghcr.io/devcontainers/features/java:1": {}
-	},
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ]
+  "name": "flyway-8.1.0",
+  "id": "flyway-8.1.0",
+  "version": "0.0.2",
+  "description": "A flyway feature",
+  "options": {},
+  "containerEnv": {
+    "PATH": "/flyway:${PATH}"
+  },
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/java:1": {}
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
 }
