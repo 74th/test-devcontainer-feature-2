@@ -113,3 +113,14 @@ devcontainer features test --features flyway-8.1.0 -p ./features/
 .github/workflows/test.yaml の devcontainer testコマンドに `-p ./features/` を追加する。
 
 .github/workflows/{validate,release}.yaml の devcontainers/action@v1 の `base-path-to-features` に `./features/src` を指定する。
+
+### 利用するときには
+
+./test-workspace/features/flyway-8.1.0 にワークスペースを作ったので、そちら参照。
+
+利用する前に、dockerからghcr.ioを使えるように以下のコマンドでログインしておく必要がある。
+
+```bash
+gh auth login
+docker login ghcr.io -u <ユーザ名> -p $(gh auth token)
+```
