@@ -1,0 +1,10 @@
+{
+    "name": "flyway-1.8.0",
+    "id": "flyway-1.8.0",
+    "version": "0.0.1",
+    "description": "A flyway feature",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
