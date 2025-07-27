@@ -36,15 +36,16 @@ jobs:
           git config pull.rebase false
           branch=automated-documentation-update-$GITHUB_RUN_ID
           git checkout -b $branch
-          git rebase origin/"$branch" || git merge origin/"$branch"
+          if git ls-remote --exit-code --heads origin "$branch"; then
+            git fetch origin "$branch"
+            git rebase origin/"$branch" || git merge origin/"$branch"
+          fi
           message='Automated documentation update'
           # Add / update and commit
           git add */**/README.md
           git commit -m 'Automated documentation update [skip ci]' || export NO_UPDATES=true
           # Push
           if [ "$NO_UPDATES" != "true" ] ; then
-              git fetch origin "$branch"
-              git rebase origin/"$branch" || git merge origin/"$branch"
               git push origin "$branch"
               gh pr create --title "$message" --body "$message"
           fi
