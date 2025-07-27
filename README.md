@@ -116,7 +116,13 @@ devcontainer features test --features flyway-8.1.0 -p ./features/
 
 ### 利用するときには
 
-[./test-workspace/flyway-8.1.0/](./test-workspace/flyway-8.1.0/)にワークスペースを作ったので、そちら参照。
+[features/src/flyway-8.1.0/README.md](features/src/flyway-8.1.0/README.md)の通り、以下のようにfeaturesを指定する
+
+```
+"features": {
+    "ghcr.io/74th/test-devcontainer-feature-2/flyway-8.1.0:0": {}
+}
+```
 
 利用する前に、dockerからghcr.ioを使えるように以下のコマンドでログインしておく必要がある。
 
@@ -124,3 +130,5 @@ devcontainer features test --features flyway-8.1.0 -p ./features/
 gh auth login
 docker login ghcr.io -u <ユーザ名> -p $(gh auth token)
 ```
+
+[./test-workspace/flyway-8.1.0/](./test-workspace/flyway-8.1.0/)にワークスペースを作ったので、そちら参照。
