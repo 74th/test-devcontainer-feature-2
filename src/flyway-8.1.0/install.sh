@@ -8,8 +8,10 @@ if [ -d "/flyway" ]; then
   exit 0
 fi
 
-apt update
-apt install -y openjdk-11-jre curl
+if ! command -v curl >/dev/null; then
+  echo "curl is not installed, installing it now"
+  apt-get update && apt-get install -y curl
+fi
 
 FLYWAY_VERSION=8.1.0
 
