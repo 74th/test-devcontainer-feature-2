@@ -116,7 +116,7 @@ devcontainer features test --features flyway-8.1.0 -p ./features/
 
 ### 利用するときには
 
-./test-workspace/features/flyway-8.1.0 にワークスペースを作ったので、そちら参照。
+[./test-workspace/flyway-8.1.0/](./test-workspace/flyway-8.1.0/)にワークスペースを作ったので、そちら参照。
 
 利用する前に、dockerからghcr.ioを使えるように以下のコマンドでログインしておく必要がある。
 
