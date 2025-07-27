@@ -14,7 +14,12 @@ https://github.com/devcontainers/feature-starter
 
 ### GitHub Actionsで動かなかったやつ
 
-.github/workflows/release.yaml の変更点PR作るやつが動かない。以下の記述に変えた。
+.github/workflows/release.yaml の変更点PR作るやつが動かない。
+
+リポジトリの Settings -> Actions -> General -> Workflow permissions で、
+Allow GitHub Actions to create and approve pull requests にチェック。
+
+.github/workflows/release.yaml を以下の記述に変えた。
 
 ```
 git rebase origin/"$branch" || git merge origin/"$branch"
