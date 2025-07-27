@@ -1,4 +1,4 @@
-# Dev Container Feature のテスト
+# Dev Container Feature自作のテスト
 
 以下のテンプレートを使用
 
